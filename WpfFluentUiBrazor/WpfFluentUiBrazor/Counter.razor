@@ -1,0 +1,38 @@
+﻿
+<section class="section">
+    <h1>label</h1>
+    <div class="columns is-desktop is-multiline">
+        <div class="column">
+            <p>Current count: @currentCount</p>
+
+            <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+@code {
+    private int currentCount = 0;
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // AddNewDataset();
+        await base.OnInitializedAsync();
+        var a = $"\"{true}\"=> ";
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // AddNewDataset();
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+}
