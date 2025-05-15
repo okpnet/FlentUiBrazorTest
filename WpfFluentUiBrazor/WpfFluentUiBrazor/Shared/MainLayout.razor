@@ -1,22 +1,24 @@
 ﻿@inherits LayoutComponentBase
 
-<FluentToastProvider />
-<FluentDialogProvider />
-<FluentTooltipProvider />
-<FluentMessageBarProvider />
-<FluentMenuProvider />
-
 <FluentMainLayout NavMenuTitle="Navigation menu">
-    <Header><h3>Fluent UI Components</h3></Header>
+    <Header>
+        <h3>Fluent UI Components</h3>
+    </Header>
     <SubHeader><p>A subheader here</p></SubHeader>
+    
     <Body>
         <div class="content">
             @Body
         </div>
     </Body>
-    <NavMenuContent >
-        <FluentNavLink Href="/" Icon="@(new Icons.Regular.Size20.Home())">Home</FluentNavLink>
-        <FluentNavLink Href="counter" Icon="@(new Icons.Regular.Size20.NumberSymbolSquare())" IconColor="Color.Accent">Counter</FluentNavLink>
-        <FluentNavLink Href="weather" Icon="@(new Icons.Regular.Size20.WeatherPartlyCloudyDay())" IconColor="Color.Accent">Weather</FluentNavLink>
+    <NavMenuContent>
+        <FluentNavLink Href="/">Home</FluentNavLink>
+        <FluentNavLink Href="/">Counter</FluentNavLink>
+        <FluentNavLink Href="/">Weather</FluentNavLink>
     </NavMenuContent>
 </FluentMainLayout>
+<FluentToastProvider />
+<FluentDialogProvider />
+<FluentTooltipProvider />
+<FluentMessageBarProvider />
+<FluentMenuProvider />
